@@ -35,7 +35,7 @@ final class SiliconInjector extends SyntheticMembersInjector {
 
             val unapplyDef =
               if (params.isEmpty) {
-                s"def unapply(obj: ${clazz.getName}): Boolean) = ???"
+                s"def unapply(obj: ${clazz.getName}): Boolean = ???"
               } else if (params.lengthCompare(1) == 0) {
                 s"def unapply(obj: ${clazz.getName}): Option[$unapplyTypes] = ???"
               } else {
